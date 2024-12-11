@@ -1,4 +1,29 @@
 #!/bin/bash
+ 
+# Variables
+FUNCTION_NAME="lambda-function"             # Replace with your Lambda function's name
+ZIP_FILE="lambda.zip"                       # The zip file containing your Lambda code
+ROLE_ARN="arn:aws:iam::123456789012:role/your-lambda-role"  # Replace with the ARN of the Lambda execution role
+HANDLER="lambda_function.lambda_handler"    # Replace with your handler function
+RUNTIME="python3.9"                         # Replace with your runtime (e.g., nodejs18.x, python3.9)
+ 
+# Check if the Lambda function already exists
+EXISTS=$(aws lambda get-function --function-name "$FUNCTION_NAME" 2>/dev/null)
+ 
+if [ -z "$EXISTS" ]; then
+    echo "Creating new Lambda function: $FUNCTION_NAME"
+    aws lambda create-function \
+        --function-name "$FUNCTION_NAME" \
+        --runtime "$RUNTIME" \
+        --role "$ROLE_ARN" \
+        --handler "$HANDLER" \
+        --zip-file "fileb://$ZIP_FILE" 
+else
+    echo "Updating existing Lambda function: $FUNCTION_NAME"
+    aws lambda update-function-code \
+        --function-name "$FUNCTION_NAME" \
+        --zip-file "fileb://$ZIP_FILE" 
+fi
 
 aws s3 mb s3://m3461234567890
 
