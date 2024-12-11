@@ -1,9 +1,8 @@
 #!/bin/bash
- 
+
 # Variables
 FUNCTION_NAME="lambda-function"             # Replace with your Lambda function's name
 ZIP_FILE="lambda.zip"                       # The zip file containing your Lambda code
-ROLE_ARN="arn:aws:iam::123456789012:role/your-lambda-role"  # Replace with the ARN of the Lambda execution role
 HANDLER="lambda_function.lambda_handler"    # Replace with your handler function
 RUNTIME="python3.9"                         # Replace with your runtime (e.g., nodejs18.x, python3.9)
  
@@ -15,7 +14,7 @@ if [ -z "$EXISTS" ]; then
     aws lambda create-function \
         --function-name "$FUNCTION_NAME" \
         --runtime "$RUNTIME" \
-        --role "$ROLE_ARN" \
+        --role "LabRole" \
         --handler "$HANDLER" \
         --zip-file "fileb://$ZIP_FILE" 
 else
