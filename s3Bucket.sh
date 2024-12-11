@@ -8,8 +8,18 @@ if [ $? -eq 0 ]; then
 else
     echo "S3 Bucket konnte nicht erstellt werden"
 fi
+
+# Upload content to the bucket
+aws s3 cp ~/test.csv s3://m3461234567890
+
+# Check if the file was uploaded
+if [ $? -eq 0 ]; then
+    echo "Datei erfolgreich hochgeladen."
+else
+    echo "Datei konnte nicht hochgeladen werden"
+fi
  
- # Remove content of the bucket
+# Remove content of the bucket
 aws s3 rm s3://m3461234567890 --recursive
 
 # Delete the bucket
