@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "pLdWJA6vZTIIz4TRuxLCZ2vsVARchHVOSzDGoi9VRvdagSRS22bwU5JPYQE+mCX62WcGaWeOwletsVN6s0dn5g==",
+  "success": true,
+  "projectFilePath": "/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/CsvToJson.csproj",
+  "expectedPackageFiles": [
+    "/home/vmadmin/.nuget/packages/amazon.lambda.apigatewayevents/2.7.1/amazon.lambda.apigatewayevents.2.7.1.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/amazon.lambda.core/2.5.0/amazon.lambda.core.2.5.0.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/amazon.lambda.serialization.systemtextjson/2.4.4/amazon.lambda.serialization.systemtextjson.2.4.4.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.11/microsoft.netcore.app.runtime.linux-x64.8.0.11.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.11/microsoft.aspnetcore.app.runtime.linux-x64.8.0.11.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/microsoft.netcore.app.crossgen2.linux-x64/8.0.11/microsoft.netcore.app.crossgen2.linux-x64.8.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

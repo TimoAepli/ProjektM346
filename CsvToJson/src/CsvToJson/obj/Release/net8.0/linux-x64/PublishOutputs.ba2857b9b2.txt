@@ -1,0 +1,7 @@
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvToJson.deps.json
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvToJson.runtimeconfig.json
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvToJson.pdb
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.APIGatewayEvents.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.Core.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.Serialization.SystemTextJson.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvToJson.dll
