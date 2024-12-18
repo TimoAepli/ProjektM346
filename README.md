@@ -8,9 +8,18 @@
 - [Einleitung zur Projektdokumentation](#einleitung-zur-projektdokumentation)
 - [Vorbereitung](#vorbereitung)
 - [Aufbau des Services](#aufbau-des-services)
-- [Inbetriebnahme](#inbetriebnahme)
+- [Nutzung](#nutzung)
     - [Anforderungen](#anforderungen)
-- [Anhang](#anhang)
+    - [Inbetriebnahme](#inbetriebnahme)
+- [Test Protokoll](#test-protokoll)
+    - [JSON File anstelle vom CSV File](#json-file-anstelle-vom-csv-file)
+    - [Leeres CSV File](#leeres-csv-file)
+    - [Korruptes CSV File](#korruptes-csv-file)
+- [Reflexion](#reflexion)
+    - [Benjamin Nater](#benjamin-nater)
+    - [Matteo Bucher](#matteo-bucher)
+    - [Timo Aepli](#timo-aepli)
+- [Quellenverzeichnis](#quellenverzeichnis)
 
 ## Projekt Team
 
@@ -32,23 +41,56 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 | Buckets per Script erstellen CLI-Datei | 18.12.2024 | alle | Matteo, Benjamin |
 | Dokumentation | 18.12.2024 | alle | Timo |
 | Selbstreflektion | 19.12.2024 | alle | alle |
-| Testen | 19.12.2024 | Benjamin | Benjamin |
+| Testen | 19.12.2024 | Timo | Timo |
 
 ## Aufbau des Services
 
-## Inbetriebnahme
+## Nutzung
 
 ### Anforderungen
 
-- Unix Betriebssystem (Linux / MacOS)
-- .NET 8 &rarr; [.NET 8 Installation](#anhang)
-- AWS Learner Lab
-- AWS CLI &rarr; [Installation und Konfiguration von AWS CLI](https://gbssg.gitlab.io/m346/iac-aws-cli/ "AWS CLI")
-- AWS S3
+- **Unix-Betriebssystem**  
+  Geeignet für Linux und macOS.  
 
+- **AWS Learner Lab**  
+  Deine Lernumgebung für Cloud-Technologien.  
 
-## Anhang
+- **AWS CLI**  
+  [Installation und Konfiguration von AWS CLI](https://gbssg.gitlab.io/m346/iac-aws-cli/ "AWS CLI")  
 
-**.NET 8 Installation**
+- **.NET 8**  
+  ![.NET 8](pictures/NET-8.png)  
 
-![.NET 8](NET-8.png)
+- **AWS Lambda**  
+  ![AWS Lambda](pictures/Lambda.png)  
+
+### Inbetriebnahme
+
+1. Folgenede Befehle asführen:
+    ```git
+    git clone https://github.com/TimoAepli/ProjektM346.git
+    cd ProjektM346
+    ./initalize.sh
+    ```
+
+## Test Protokoll
+
+### JSON File anstelle vom CSV File
+
+### Leeres CSV File
+
+### Korruptes CSV File
+
+## Reflexion
+
+### Benjamin Nater
+
+### Matteo Bucher
+
+### Timo Aepli
+
+## Quellenverzeichnis
+
+[AWS CLI](https://docs.aws.amazon.com/cli/)
+
+[ChatGPT](https://chatgpt.com/)
