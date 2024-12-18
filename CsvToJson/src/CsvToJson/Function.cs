@@ -15,7 +15,6 @@ namespace CsvToJson
     public class Function
     {
         private readonly IAmazonS3 _s3Client;
-        private const string TargetBucket = "m3460987654321";
 
         public Function()
         {
@@ -24,6 +23,7 @@ namespace CsvToJson
 
         public async Task FunctionHandler(S3Event s3Event, ILambdaContext context)
         {
+            var TargetBucket = Environment.GetEnvironmentVariable("BUCKET2_NAME");            
             foreach (var record in s3Event.Records)
             {
                 string sourceBucket = record.S3.Bucket.Name;
