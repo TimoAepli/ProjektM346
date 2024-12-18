@@ -9,9 +9,12 @@
     ".NETCoreApp,Version=v8.0/linux-x64": {
       "CsvToJson/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.7.410.7",
           "Amazon.Lambda.APIGatewayEvents": "2.7.1",
           "Amazon.Lambda.Core": "2.5.0",
-          "Amazon.Lambda.Serialization.SystemTextJson": "2.4.4"
+          "Amazon.Lambda.S3Events": "3.1.0",
+          "Amazon.Lambda.Serialization.SystemTextJson": "2.4.4",
+          "CsvHelper": "33.0.1"
         },
         "runtime": {
           "CsvToJson.dll": {}
@@ -33,6 +36,14 @@
           }
         }
       },
+      "Amazon.Lambda.S3Events/3.1.0": {
+        "runtime": {
+          "lib/net8.0/Amazon.Lambda.S3Events.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Amazon.Lambda.Serialization.SystemTextJson/2.4.4": {
         "dependencies": {
           "Amazon.Lambda.Core": "2.5.0"
@@ -41,6 +52,33 @@
           "lib/net8.0/Amazon.Lambda.Serialization.SystemTextJson.dll": {
             "assemblyVersion": "0.0.0.0",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "AWSSDK.Core/3.7.400.65": {
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.400.65"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.410.7": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.400.65"
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.410.7"
+          }
+        }
+      },
+      "CsvHelper/33.0.1": {
+        "runtime": {
+          "lib/net8.0/CsvHelper.dll": {
+            "assemblyVersion": "33.0.0.0",
+            "fileVersion": "33.0.1.24"
           }
         }
       }
@@ -66,12 +104,40 @@
       "path": "amazon.lambda.core/2.5.0",
       "hashPath": "amazon.lambda.core.2.5.0.nupkg.sha512"
     },
+    "Amazon.Lambda.S3Events/3.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dBhPrxs7c5BA97hKxszYEtu7EJh2q8v7v4LYCQ26aXd/+/vzvP3taMa4PY8AizsPGqvp1chdTZWCB8D4KG3iNg==",
+      "path": "amazon.lambda.s3events/3.1.0",
+      "hashPath": "amazon.lambda.s3events.3.1.0.nupkg.sha512"
+    },
     "Amazon.Lambda.Serialization.SystemTextJson/2.4.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-iv/cvqFuZ3v3+NFDyof0IJZvU+4kdpzOe3pWSBwp9HB885I+D32WQxuid9V4GnvRynER9XnWMPaDmImX8qH5cA==",
       "path": "amazon.lambda.serialization.systemtextjson/2.4.4",
       "hashPath": "amazon.lambda.serialization.systemtextjson.2.4.4.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.7.400.65": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/BeaCTnGHatW5ciixcLSsDYyS1TMuyEtWbKimsh7cUOmLu5mW/foedZAPNmYDGaEQBuZyFMbjYm0uU8tcv5tFg==",
+      "path": "awssdk.core/3.7.400.65",
+      "hashPath": "awssdk.core.3.7.400.65.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.7.410.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vuz/2X/Rwm4OKAMG87Wgmsr2QeLzR4rXJ2l9Yqlx9zHVJJbppuexbshWZ7BfIvyTVH7phyIQ3H0K1Bejz8uh4w==",
+      "path": "awssdk.s3/3.7.410.7",
+      "hashPath": "awssdk.s3.3.7.410.7.nupkg.sha512"
+    },
+    "CsvHelper/33.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fev4lynklAU2A9GVMLtwarkwaanjSYB4wUqO2nOJX5hnzObORzUqVLe+bDYCUyIIRQM4o5Bsq3CcyJR89iMmEQ==",
+      "path": "csvhelper/33.0.1",
+      "hashPath": "csvhelper.33.0.1.nupkg.sha512"
     }
   }
 }

@@ -28,6 +28,19 @@
           }
         }
       },
+      "Amazon.Lambda.S3Events/3.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Amazon.Lambda.S3Events.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Amazon.Lambda.S3Events.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Amazon.Lambda.Serialization.SystemTextJson/2.4.4": {
         "type": "package",
         "dependencies": {
@@ -56,6 +69,48 @@
         },
         "runtime": {
           "lib/netstandard2.0/Amazon.Lambda.TestUtilities.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AWSSDK.Core/3.7.400.65": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "AWSSDK.S3/3.7.410.7": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.7.400.65, 4.0.0)"
+        },
+        "compile": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/AWSSDK.S3.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "CsvHelper/33.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CsvHelper.dll": {
             "related": ".xml"
           }
         }
@@ -468,9 +523,12 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "AWSSDK.S3": "3.7.410.7",
           "Amazon.Lambda.APIGatewayEvents": "2.7.1",
           "Amazon.Lambda.Core": "2.5.0",
-          "Amazon.Lambda.Serialization.SystemTextJson": "2.4.4"
+          "Amazon.Lambda.S3Events": "3.1.0",
+          "Amazon.Lambda.Serialization.SystemTextJson": "2.4.4",
+          "CsvHelper": "33.0.1"
         },
         "compile": {
           "bin/placeholder/CsvToJson.dll": {}
@@ -518,6 +576,21 @@
         "lib/netstandard2.0/Amazon.Lambda.Core.xml"
       ]
     },
+    "Amazon.Lambda.S3Events/3.1.0": {
+      "sha512": "dBhPrxs7c5BA97hKxszYEtu7EJh2q8v7v4LYCQ26aXd/+/vzvP3taMa4PY8AizsPGqvp1chdTZWCB8D4KG3iNg==",
+      "type": "package",
+      "path": "amazon.lambda.s3events/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "amazon.lambda.s3events.3.1.0.nupkg.sha512",
+        "amazon.lambda.s3events.nuspec",
+        "lib/net8.0/Amazon.Lambda.S3Events.dll",
+        "lib/net8.0/Amazon.Lambda.S3Events.xml",
+        "lib/netcoreapp3.1/Amazon.Lambda.S3Events.dll",
+        "lib/netcoreapp3.1/Amazon.Lambda.S3Events.xml"
+      ]
+    },
     "Amazon.Lambda.Serialization.SystemTextJson/2.4.4": {
       "sha512": "iv/cvqFuZ3v3+NFDyof0IJZvU+4kdpzOe3pWSBwp9HB885I+D32WQxuid9V4GnvRynER9XnWMPaDmImX8qH5cA==",
       "type": "package",
@@ -547,6 +620,95 @@
         "amazon.lambda.testutilities.nuspec",
         "lib/netstandard2.0/Amazon.Lambda.TestUtilities.dll",
         "lib/netstandard2.0/Amazon.Lambda.TestUtilities.xml"
+      ]
+    },
+    "AWSSDK.Core/3.7.400.65": {
+      "sha512": "/BeaCTnGHatW5ciixcLSsDYyS1TMuyEtWbKimsh7cUOmLu5mW/foedZAPNmYDGaEQBuZyFMbjYm0uU8tcv5tFg==",
+      "type": "package",
+      "path": "awssdk.core/3.7.400.65",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.7.400.65.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/net8.0/AWSSDK.Core.dll",
+        "lib/net8.0/AWSSDK.Core.pdb",
+        "lib/net8.0/AWSSDK.Core.xml",
+        "lib/netcoreapp3.1/AWSSDK.Core.dll",
+        "lib/netcoreapp3.1/AWSSDK.Core.pdb",
+        "lib/netcoreapp3.1/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.S3/3.7.410.7": {
+      "sha512": "Vuz/2X/Rwm4OKAMG87Wgmsr2QeLzR4rXJ2l9Yqlx9zHVJJbppuexbshWZ7BfIvyTVH7phyIQ3H0K1Bejz8uh4w==",
+      "type": "package",
+      "path": "awssdk.s3/3.7.410.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
+        "analyzers/dotnet/cs/SharedAnalysisCode.dll",
+        "awssdk.s3.3.7.410.7.nupkg.sha512",
+        "awssdk.s3.nuspec",
+        "images/AWSLogo.png",
+        "lib/net35/AWSSDK.S3.dll",
+        "lib/net35/AWSSDK.S3.pdb",
+        "lib/net35/AWSSDK.S3.xml",
+        "lib/net45/AWSSDK.S3.dll",
+        "lib/net45/AWSSDK.S3.pdb",
+        "lib/net45/AWSSDK.S3.xml",
+        "lib/net8.0/AWSSDK.S3.dll",
+        "lib/net8.0/AWSSDK.S3.pdb",
+        "lib/net8.0/AWSSDK.S3.xml",
+        "lib/netcoreapp3.1/AWSSDK.S3.dll",
+        "lib/netcoreapp3.1/AWSSDK.S3.pdb",
+        "lib/netcoreapp3.1/AWSSDK.S3.xml",
+        "lib/netstandard2.0/AWSSDK.S3.dll",
+        "lib/netstandard2.0/AWSSDK.S3.pdb",
+        "lib/netstandard2.0/AWSSDK.S3.xml",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "CsvHelper/33.0.1": {
+      "sha512": "fev4lynklAU2A9GVMLtwarkwaanjSYB4wUqO2nOJX5hnzObORzUqVLe+bDYCUyIIRQM4o5Bsq3CcyJR89iMmEQ==",
+      "type": "package",
+      "path": "csvhelper/33.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.33.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net462/CsvHelper.dll",
+        "lib/net462/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net48/CsvHelper.dll",
+        "lib/net48/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/net7.0/CsvHelper.dll",
+        "lib/net7.0/CsvHelper.xml",
+        "lib/net8.0/CsvHelper.dll",
+        "lib/net8.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
     "Microsoft.CodeCoverage/17.11.1": {

@@ -17,3 +17,7 @@
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/obj/Release/net8.0/linux-x64/CsvToJson.pdb
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/obj/Release/net8.0/linux-x64/CsvToJson.genruntimeconfig.cache
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/obj/Release/net8.0/linux-x64/ref/CsvToJson.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/linux-x64/Amazon.Lambda.S3Events.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/linux-x64/AWSSDK.Core.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/linux-x64/AWSSDK.S3.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/linux-x64/CsvHelper.dll

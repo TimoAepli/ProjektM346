@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "pLdWJA6vZTIIz4TRuxLCZ2vsVARchHVOSzDGoi9VRvdagSRS22bwU5JPYQE+mCX62WcGaWeOwletsVN6s0dn5g==",
+  "dgSpecHash": "H1iqZ3Qv6JGXsACJPF+tfdibq6xwvjkdzxCZW3dLK80Ac8H8yVqcaTIFY3LLv8r+6oCNlPQkHT9qLVe8uuAmSQ==",
   "success": true,
   "projectFilePath": "/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/CsvToJson.csproj",
   "expectedPackageFiles": [
     "/home/vmadmin/.nuget/packages/amazon.lambda.apigatewayevents/2.7.1/amazon.lambda.apigatewayevents.2.7.1.nupkg.sha512",
     "/home/vmadmin/.nuget/packages/amazon.lambda.core/2.5.0/amazon.lambda.core.2.5.0.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/amazon.lambda.s3events/3.1.0/amazon.lambda.s3events.3.1.0.nupkg.sha512",
     "/home/vmadmin/.nuget/packages/amazon.lambda.serialization.systemtextjson/2.4.4/amazon.lambda.serialization.systemtextjson.2.4.4.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/awssdk.core/3.7.400.65/awssdk.core.3.7.400.65.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/awssdk.s3/3.7.410.7/awssdk.s3.3.7.410.7.nupkg.sha512",
+    "/home/vmadmin/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512",
     "/home/vmadmin/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.11/microsoft.netcore.app.runtime.linux-x64.8.0.11.nupkg.sha512",
     "/home/vmadmin/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.11/microsoft.aspnetcore.app.runtime.linux-x64.8.0.11.nupkg.sha512",
     "/home/vmadmin/.nuget/packages/microsoft.netcore.app.crossgen2.linux-x64/8.0.11/microsoft.netcore.app.crossgen2.linux-x64.8.0.11.nupkg.sha512"

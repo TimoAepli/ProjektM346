@@ -3,5 +3,9 @@
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvToJson.pdb
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.APIGatewayEvents.dll
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.Core.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.S3Events.dll
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/Amazon.Lambda.Serialization.SystemTextJson.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/AWSSDK.Core.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/AWSSDK.S3.dll
+/home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvHelper.dll
 /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/bin/Release/net8.0/publish/CsvToJson.dll
