@@ -8,9 +8,18 @@
 - [Einleitung zur Projektdokumentation](#einleitung-zur-projektdokumentation)
 - [Vorbereitung](#vorbereitung)
 - [Aufbau des Services](#aufbau-des-services)
-- [Inbetriebnahme](#inbetriebnahme)
+- [Nutzung](#nutzung)
     - [Anforderungen](#anforderungen)
-- [Anhang](#anhang)
+    - [Inbetriebnahme](#inbetriebnahme)
+- [Test Protokoll](#test-protokoll)
+    - [JSON File anstelle vom CSV File](#json-file-anstelle-vom-csv-file)
+    - [Leeres CSV File](#leeres-csv-file)
+    - [Korruptes CSV File](#korruptes-csv-file)
+- [Reflexion](#reflexion)
+    - [Benjamin Nater](#benjamin-nater)
+    - [Matteo Bucher](#matteo-bucher)
+    - [Timo Aepli](#timo-aepli)
+- [Quellenverzeichnis](#quellenverzeichnis)
 
 ## Projekt Team
 
@@ -36,19 +45,46 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 
 ## Aufbau des Services
 
-## Inbetriebnahme
+## Nutzung
 
 ### Anforderungen
 
 - Unix Betriebssystem (Linux / MacOS)
-- .NET 8 &rarr; [.NET 8 Installation](#anhang)
 - AWS Learner Lab
 - AWS CLI &rarr; [Installation und Konfiguration von AWS CLI](https://gbssg.gitlab.io/m346/iac-aws-cli/ "AWS CLI")
 - AWS S3
+- .NET 8 
+
+![.NET 8](pictures/NET-8.png)
+
+### Inbetriebnahme
+
+1. Folgenede Befehle asführen:
+    ```git
+    git clone https://github.com/TimoAepli/ProjektM346.git
+    cd ProjektM346
+    ./initalize.sh
+    ```
+
+## Test Protokoll
+
+### JSON File anstelle vom CSV File
+
+### Leeres CSV File
+
+### Korruptes CSV File
 
 
-## Anhang
+## Reflexion
 
-**.NET 8 Installation**
+### Benjamin Nater
 
-![.NET 8](NET-8.png)
+### Matteo Bucher
+
+### Timo Aepli
+
+## Qullenverzeichnis
+
+[AWS CLI](https://docs.aws.amazon.com/cli/)
+
+[ChatGPT](https://chatgpt.com/)
