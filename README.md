@@ -41,7 +41,7 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 | Buckets per Script erstellen CLI-Datei | 18.12.2024 | alle | Matteo, Benjamin |
 | Dokumentation | 18.12.2024 | alle | Timo |
 | Selbstreflektion | 19.12.2024 | alle | alle |
-| Testen | 19.12.2024 | Benjamin | Benjamin |
+| Testen | 19.12.2024 | Timo | Timo |
 
 ## Aufbau des Services
 
@@ -49,13 +49,20 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 
 ### Anforderungen
 
-- Unix Betriebssystem (Linux / MacOS)
-- AWS Learner Lab
-- AWS CLI &rarr; [Installation und Konfiguration von AWS CLI](https://gbssg.gitlab.io/m346/iac-aws-cli/ "AWS CLI")
-- AWS S3
-- .NET 8 
+- **Unix-Betriebssystem**  
+  Geeignet für Linux und macOS.  
 
-![.NET 8](pictures/NET-8.png)
+- **AWS Learner Lab**  
+  Deine Lernumgebung für Cloud-Technologien.  
+
+- **AWS CLI**  
+  [Installation und Konfiguration von AWS CLI](https://gbssg.gitlab.io/m346/iac-aws-cli/ "AWS CLI")  
+
+- **.NET 8**  
+  ![.NET 8](pictures/NET-8.png)  
+
+- **AWS Lambda**  
+  ![AWS Lambda](pictures/Lambda.png)  
 
 ### Inbetriebnahme
 
@@ -74,7 +81,6 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 
 ### Korruptes CSV File
 
-
 ## Reflexion
 
 ### Benjamin Nater
@@ -83,7 +89,7 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 
 ### Timo Aepli
 
-## Qullenverzeichnis
+## Quellenverzeichnis
 
 [AWS CLI](https://docs.aws.amazon.com/cli/)
 
