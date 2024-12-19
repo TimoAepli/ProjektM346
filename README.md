@@ -285,9 +285,9 @@ In der Schule arbeiteten wir dann sofort los.
 Im Nachhinein denke ich, dass es wohl besser gewesen wäre, wenn wir einen groben Plan gemacht hätten.
 So Verfolgten wir falsche Ansätze, wie ein Erstellscript für eine EC2 Instanz, welche wir nie brauchten.
 Danach versuchten wir mit ChatGPT eine Gesamtlösung generieren zu lassen.
-Dies war aber zu viel auf ein Mal und es funktionierte nicht wirklich.
+Dies war aber zu viel auf einmal und es funktionierte nicht wirklich.
 Die s3 Buckets konnten wir nun erstellen und auch Daten uploaden, downloaden und die Buckets löschen.
-Wie wir die Lambda Funkion erstellen können wussten wir noch nicht.
+Wie wir die Lambda Funkion erstellen können, wussten wir noch nicht.
 Schlussendlich hatten wir noch kaum Fortschritt und der Abgabetermin näherte sich.
 Daraufhin vertiefte ich mich in die Logiken rund um AWS.
 Mit einem deutlich effizienteren Gebrauch von ChatGPT und der Nutzung von der AWS Cli Dokumentation konnte ich die Anwendung umsetzen.
