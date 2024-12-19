@@ -7,6 +7,41 @@ export LAMBDA_NAME="CsvToJson"
 REGION=$(aws configure get region)
 ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 
+if [ -z "$1" ]; then
+    export CSV_DELIMITER="Comma"
+else
+    case "$1" in
+        ",")
+            export CSV_DELIMITER="comma"
+            ;;
+        ";")
+            export CSV_DELIMITER="semicolon"
+            ;;
+        "\t")
+            export CSV_DELIMITER="tab"
+            ;;
+        "|")
+            export CSV_DELIMITER="pipe"
+            ;;
+        ":")
+            export CSV_DELIMITER="colon"
+            ;;
+        " ")
+            export CSV_DELIMITER="space"
+            ;;
+        "~")
+            export CSV_DELIMITER="tilde"
+            ;;
+        "^")
+            export CSV_DELIMITER="caret"
+            ;;
+        *)
+            echo "Delimiter ist nicht verfügbar"
+            exit 1
+            ;;
+    esac
+fi
+
 # export the variables to a temporary environment file
 ENV_FILE="./env.sh"
 echo "export BUCKET_NAME=$BUCKET_NAME" > "$ENV_FILE"
@@ -17,7 +52,6 @@ echo "export LAMBDA_NAME=$LAMBDA_NAME" >> "$ENV_FILE"
 cd CsvToJson/src/CsvToJson
 dotnet lambda deploy-function \
     --function-role LabRole \
-    --environment-variables BUCKET2_NAME=$BUCKET2_NAME \
     $LAMBDA_NAME
 
 # Check if the lambda function was created
@@ -26,6 +60,16 @@ if [ $? -eq 0 ]; then
 else
     echo "Lambda Funktion konnte nicht erstellt werden"
 fi
+
+aws lambda update-function-configuration --function-name $LAMBDA_NAME --environment "Variables={BUCKET2_NAME=$BUCKET2_NAME,CSV_DELIMITER=$CSV_DELIMITER}"
+
+# Check if the lambda function environment variables were created
+if [ $? -eq 0 ]; then
+    echo "Umgebungsvariabeln erfolgreich erstellt."
+else
+    echo "Umgebungsvariabeln konnten nicht erstellt werden"
+fi
+
 
 # Create the s3 bucket
 aws s3 mb s3://$BUCKET_NAME
