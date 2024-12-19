@@ -13,9 +13,12 @@
     - [Inbetriebnahme](#inbetriebnahme)
     - [Nutzung](#nutzung)
 - [Test Protokoll](#test-protokoll)
-    - [JSON File anstelle vom CSV File](#json-file-anstelle-vom-csv-file)
+    - [Normales CSV File](#normales-csv-file)
+    - [CSV File mit anderen Delimitern](#csv-file-mit-anderen-delimitern)
+    - [JSON File anstelle von CSV File](#json-file-anstelle-von-csv-file)
     - [Leeres CSV File](#leeres-csv-file)
-    - [Korruptes CSV File](#korruptes-csv-file)
+    - [CSV File mit zu vielen Werten](#csv-file-mit-zu-vielen-werten)
+    - [Speicherort der konvertierten Dateien](#speicherort-der-konvertierten-dateien)
 - [Reflexion](#reflexion)
     - [Benjamin Nater](#benjamin-nater)
     - [Matteo Bucher](#matteo-bucher)
@@ -129,7 +132,7 @@ Das JSON File wurd im ProjektM346 Ordner erfolgreich abgelegt:
 ```
 Dieser Test konnte in kurzer Zeit erfolgreich abgeschlossen werden.
 
-### CSV mit anderen Delimitern
+### CSV File mit anderen Delimitern
 
 Bei diesem Test wurden die Kommas im CSV File durch Semikolons ersetzt und erfolgreich konvertiert:
 
@@ -137,7 +140,7 @@ Bei diesem Test wurden die Kommas im CSV File durch Semikolons ersetzt und erfol
 
 Das JSON wurde korrekt erstellt und sah gleich aus wie beim CSV File mit den Kommas.
 
-### JSON File anstelle vom CSV File
+### JSON File anstelle von CSV File
 
 Bei diesem Test wurde ein JSON File anstelle vom CSV File.
 
