@@ -49,7 +49,86 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
 
 ## Aufbau des Services
 
+Der Cloud-Service basiert auf drei Scripts und einem dotnet-Projekt. Durch den initialize Script wird das dotnet-Projekt als lambda-Funktion deployed und zwei s3 Buckets werden erstellt. Mit dem Script csvToJson kann der eigentliche Cloud-Service, die csv zu json Konvertierung genutzt werden. Über den reset Script können schlussendlich alle erstellten Instanzen im AWS Learner Lab wieder gelöscht werden.
+
+Funktionsweise Initialize.sh
+Im Initialize.sh werden als erstes eindeutige s3Bucketnamen und definiert den Namen der Lambda Funktion. Wenn diese Namen angepasst werden sollen, kann das in den ersten Zeilen des initialize.sh Files gemacht werden. BUCKET_NAME ist der input Bucket Name und BUCKET2_NAME ist der output Bucket Name. Der restliche Ablauf ist wie folgt:
+
+- Region und Account ID von aws auslesen
+- Prüfen ob ein Delimiter mitgegeben wurde (1. Parameter) und diesen zu einem Wort konvertieren
+- - Der Standard-Delimiter ist Komma
+- - Der Delimiter darf nicht als Zeichen gespeichert sein, da aws keine Variabelwerte mit Zeichen zulässt
+- Die Namen der s3 Buckets und der Lambda Funktion im Environment File env.sh speichern, damit diese in anderen Scripts verfügbar sind
+- Lambda Funktion deployen
+- Umgebungsvariabeln der Lambda Funktion konfigurieren
+- - BUCKET2_NAME output Bucket, wird in der Lambda Funktion verwendet
+- - CSV_DELIMITER Delimiter des csv Files, wird in der Lambda Funktion verwendet
+- s3 Buckets erstellen
+- Triggerberechtigung für den input s3 Bucket erstellen
+- Trigger erstellen, bei einem csv-Fileupload in den input s3 Bucket wird die Lambda Funktion getriggert
+
+Funktionsweise csvToJson.sh
+
+- Variabeln aus dem env.sh auslesen
+- Wenn keine csv-Datei als Parameter mitgegeben wurde (1. Parameter), wird der Pfad zu einer csv-Datei vom User angefordert
+- File in den input s3 Bucket laden
+- Mit dem Pfad den Dateinamen der konvertierten json Datei berechnen
+- Json Datei vom output s3 Bucket herunterladen
+
+Funktionsweise reset.sh
+
+- Variabeln aus dem env.sh auslesen
+- s3 Bucket Inhalt löschen
+- s3 Bucket löschen
+- Triggerberechtigung des input s3 Buckets löschen
+- Lambda Funktio löschen
+- env.sh löschen
+
+Funktionsweise Lambda Funktion
+
+- Output s3 Bucket und Delimiter aus den Umgebungsvariabeln auslesen
+- Delimiter von einem Wort zu einem Zeichen konvertieren
+- Durch alle hochgeladenen csvs loopen
+- - Input Bucket und hochgeladenes Element auslesen
+- - Delimiter setzen
+- - mit dem Csv-Helper die Csv Datei lesen und in ein Dictionary speichern
+- - Dictionary zu einem Json string konvertieren
+- - Json string in ein json File im output s3 Bucket speichern
+- - Loggen, dass die Konvertierung erfolgreich war
+
 ## Anwendung
+
+Bei allen Befehlen wird davon ausgegangen, dass sich der Anwender im Ordner /ProjektM346 befindet.
+Die Anwendung des Cloud-Services findet über den Script csvToJson statt.
+Zum eine csv Datei konvertieren, kann der Pfad zu ihr als Parameter mitgegeben werden:
+
+    ```
+    ./csvToJson.sh "CSVPFAD"
+    ```
+
+Ansonsten wird im Verlauf des Scripts nach der zu konvertierenden Datei gefragt
+  
+    ```
+    ./csvToJson.sh
+    ```
+
+Die Datei wird automatisch konvertiert und im Ordner /ProjektM346 als json Datei abgelegt
+Beispiel:
+
+    ```
+    ./csvToJson.sh /home/maxmuster/Mitgliederliste.csv 
+    ```
+
+Mitgliederliste.json wird im Ordner /ProjektM346 abgelegt.
+
+Wenn der Delimiter gewechselt werden soll, kann das Script reset.sh ausgeführt werden und daraufhin erneut das initialize.sh mit dem benötigten Delimiter
+
+    ```
+    ./reset.sh
+    ./initialize.sh "DELIMITER"
+    ```
+
+Wenn der Cloud-Service nicht mehr benötigt wird, kann ebenfalls das reset.sh ausgeführt werden.
 
 ### Anforderungen
 
@@ -77,7 +156,19 @@ Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir ein
     ```
     git clone https://github.com/TimoAepli/ProjektM346.git
     cd ProjektM346
+    ```
+
+    Falls csv Dateien mit dem Delimiter Komma konvertiert werden sollen:
+
+    ```
     ./initalize.sh
+    ```
+
+    Falls csv Dateien mit einem anderen Delimiter konvertiert werden sollen:
+    DELIMITER mit dem entsprechenden Delimiter austauschen z.B. ;
+
+    ```
+    ./initalize.sh "DELIMITER"
     ```
 
 ---

@@ -19,9 +19,6 @@ if [ ! -f "$input" ]; then
     exit 1
 fi
 
-csv_file=$(basename "$input")
-json_file="${csv_file%.csv}.json"
-
 # Upload content to the bucket
 aws s3 cp $input s3://$BUCKET_NAME
 
@@ -31,6 +28,9 @@ if [ $? -eq 0 ]; then
 else
     echo "Datei $input konnte nicht hochgeladen werden"
 fi
+
+csv_file=$(basename "$input")
+json_file="${csv_file%.csv}.json"
 
 sleep 3
 
