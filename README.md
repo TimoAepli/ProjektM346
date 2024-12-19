@@ -141,7 +141,7 @@ Das JSON wurde korrekt erstellt und sah gleich aus wie beim CSV File mit den Kom
 
 Bei diesem Test wurde ein JSON File anstelle vom CSV File.
 
-![Test mit JSON File](pictures/testJson.png)
+![Test mit JSON File](pictures/testJSON.png)
 
 Dieser Test ist fehlgeschlagen, was positiv ist. 
 In der nächsten Version wird die Fehlermeldung überarbeitet und zurückgegeben, dass nur csv-Dateien konvertiert werden können.
