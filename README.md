@@ -322,8 +322,8 @@ Ich habe alle notwendigen Kriterien in Markdown geschrieben und es auf das Teste
 Nachdem die Skripte fertig waren, konnte ich mit dem Testen beginnen. Da ich alle Dateien, die konvertiert werden mussten, schon vorbereitet hatte, dauerte das Testen an sich nicht so lange.
 Beim Testen habe ich noch einen Fehler entdeckt, den Benjamin schnell behoben hat.
 Das Protokollieren war aufwendiger, ich musste immer wieder überprüfen, ob das, was ich schrieb, richtig war, und dadurch habe ich den Code besser kennengelernt und definitiv viel gelernt.   
+Wir haben die Aufgabe etwas unterschätzt und sind dadurch etwas unter Zeitdruck geraten, trotzdem sind wir rechtzeitig mit einem guten Endergebnis fertig geworden.
 Ich habe durch das Projekt sehr viel gelernt, ich konnte das Wissen, das wir im Unterricht gelernt haben, vertiefen und meine Kenntnisse im Bereich Markdown stark verbessern.
-Ich bin zufrieden mit unserem Endergebnis.
 
 
 ## Quellenverzeichnis
