@@ -39,13 +39,13 @@ In diesem Projekt haben wir, Timo Aepli, Matteo Bucher und Benjamin Nater, einen
 
 Zuerst haben wir ein öffentliches Git-Repository erstellt. Danach haben wir eine Aufgabenliste erstellt, in der festgelegt ist, wer was macht.
 
-| Aufgabe | Erledigt bis | Wer | Verantwortlich |
-| ----------- | ----------- | ----------- | ----------- |
-| Lambda Funktion | 18.12.2024 | alle | Matteo, Benjamin |
-| Buckets per Script erstellen CLI-Datei | 18.12.2024 | alle | Matteo, Benjamin |
-| Dokumentation | 18.12.2024 | alle | Timo |
-| Selbstreflektion | 19.12.2024 | alle | alle |
-| Testen | 19.12.2024 | Timo | Timo |
+| Aufgabe                                 | Erledigt bis | Wer  | Verantwortlich   |
+|-----------------------------------------|--------------|------|------------------|
+| Lambda Funktion                         | 18.12.2024   | alle | Matteo, Benjamin |
+| Buckets per Script erstellen CLI-Datei  | 18.12.2024   | alle | Matteo, Benjamin |
+| Dokumentation                           | 18.12.2024   | alle | Timo             |
+| Testen                                  | 19.12.2024   | Timo | Timo             |
+| Selbstreflexion                         | 19.12.2024   | alle | alle             |
 
 ## Aufbau des Services
 
@@ -127,7 +127,6 @@ cd ProjektM346
 ./initalize.sh
 ```
 
-
 ---
 
 ### Nutzung
@@ -184,7 +183,7 @@ Bei diesem Test wurde ein normales CSV File verwendet und erfolgreich konvertier
 
 ![Test mit normalem CSV File](pictures/testCsv.png)
 
-Das JSON File wurd im ProjektM346 Ordner erfolgreich abgelegt:
+Das JSON File wurde im ProjektM346 Ordner erfolgreich abgelegt:
 ```
 [
   {
@@ -217,7 +216,13 @@ Dieser Test konnte in kurzer Zeit erfolgreich abgeschlossen werden.
 
 ### CSV File mit anderen Delimitern
 
-Bei diesem Test wurden die Kommas im CSV File durch Semikolons ersetzt und erfolgreich konvertiert:
+Um die Delimitern zu ändern muss amn zuerst diesen Code ausführen:
+
+```
+./initalize.sh ";"
+```
+
+Bei diesem Test wurden die Kommas im CSV File durch Semikolons ersetzt und erfolgreich konvertiert:  
 
 ![Test mit Semikolons](pictures/testSemikolon.png)
 
@@ -305,12 +310,20 @@ Danach wurde ich leider krank, war nicht in der Schule und konnte auch von zu Ha
 Deshalb habe ich leider auch nicht die Lambda-Funktion erstellt und komme damit jetzt nicht so gut zurecht.
 Ich hatte anfangs Probleme mit Git auf der VM, aber diese konnten wir dank Benjamins Git-Kenntnissen zum Glück schnell lösen.
 Trotzdem konnte ich viel lernen und das, was wir im Unterricht behandelt haben, nochmals vertiefen.
-Im Grossen und Ganzen war es eine Herausforderung, aber ich denke wir konnten ein ziemlich gutes Endergebnis abliefern.
+Im Grossen und Ganzen war es eine Herausforderung. Die Abgabeverschiebung kam uns recht gelegen, und so konnten wir, denke ich, ein ziemlich gutes Endergebnis abliefern.
 
 ### Timo Aepli
+
 Zuerst habe ich mich in die Aufgabenstellung und das Thema eingearbeitet.   
 Dann haben wir eine grobe Übersicht gemacht, wer was macht. Wir haben uns darauf geeinigt, dass alle an allem arbeiten und dass es nur "Verantwortliche" gibt, die dafür sorgen, dass es fertig wird.
 Ich war für die Dokumentation verantwortlich und lernte so Markdowns kennen. Ich habe eine erste Version der Readme erstellt und bei der Entwicklung der Buckets geholfen.   
+Danach hatte ich nicht mehr viel mit der Entwicklung der Skripte zu tun, dafür umso mehr mit Markdown.
+Ich habe alle notwendigen Kriterien in Markdown geschrieben und es auf das Testen und Beschreiben des Skripts vorbereitet.   
+Nachdem die Skripte fertig waren, konnte ich mit dem Testen beginnen. Da ich alle Dateien, die konvertiert werden mussten, schon vorbereitet hatte, dauerte das Testen an sich nicht so lange.
+Beim Testen habe ich noch einen Fehler entdeckt, den Benjamin schnell behoben hat.
+Das Protokollieren war aufwendiger, ich musste immer wieder überprüfen, ob das, was ich schrieb, richtig war, und dadurch habe ich den Code besser kennengelernt und definitiv viel gelernt.   
+Ich habe durch das Projekt sehr viel gelernt, ich konnte das Wissen, das wir im Unterricht gelernt haben, vertiefen und meine Kenntnisse im Bereich Markdown stark verbessern.
+Ich bin zufrieden mit unserem Endergebnis.
 
 
 ## Quellenverzeichnis
