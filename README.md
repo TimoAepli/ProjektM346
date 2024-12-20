@@ -305,8 +305,7 @@ Danach wurde ich leider krank, war nicht in der Schule und konnte auch von zu Ha
 Deshalb habe ich leider auch nicht die Lambda-Funktion erstellt und komme damit jetzt nicht so gut zurecht.
 Ich hatte anfangs Probleme mit Git auf der VM, aber diese konnten wir dank Benjamins Git-Kenntnissen zum Glück schnell lösen.
 Trotzdem konnte ich viel lernen und das, was wir im Unterricht behandelt haben, nochmals vertiefen.
-Im Grossen und Ganzen war es eine Herausforderung. Die Abgabeverschiebung kam uns recht gelegen, und so konnten wir, denke ich, ein ziemlich gutes Endergebnis abliefern.
-
+Im Grossen und Ganzen war es eine Herausforderung, aber ich denke wir konnten ein ziemlich gutes Endergebnis abliefern.
 
 ### Timo Aepli
 Zuerst habe ich mich in die Aufgabenstellung und das Thema eingearbeitet.   
