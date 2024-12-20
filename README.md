@@ -56,16 +56,16 @@ Im Initialize.sh werden als erstes eindeutige s3Bucketnamen und definiert den Na
 
 - Region und Account ID von aws auslesen
 - Prüfen ob ein Delimiter mitgegeben wurde (1. Parameter) und diesen zu einem Wort konvertieren
-- - Der Standard-Delimiter ist Komma
-- - Der Delimiter darf nicht als Zeichen gespeichert sein, da aws keine Variabelwerte mit Zeichen zulässt
+  - Der Standard-Delimiter ist Komma
+  - Der Delimiter darf nicht als Zeichen gespeichert sein, da aws keine Variablenwerte mit Zeichen zulässt
 - Die Namen der s3 Buckets und der Lambda Funktion im Environment File env.sh speichern, damit diese in anderen Scripts verfügbar sind
 - Lambda Funktion deployen
-- Umgebungsvariabeln der Lambda Funktion konfigurieren
-- - BUCKET2_NAME output Bucket, wird in der Lambda Funktion verwendet
-- - CSV_DELIMITER Delimiter des csv Files, wird in der Lambda Funktion verwendet
+- Umgebungsvariablen der Lambda Funktion konfigurieren
+  - BUCKET2_NAME output Bucket, wird in der Lambda Funktion verwendet
+  - CSV_DELIMITER Delimiter des csv Files, wird in der Lambda Funktion verwendet
 - s3 Buckets erstellen
-- Triggerberechtigung für den input s3 Bucket erstellen
-- Trigger erstellen, bei einem csv-Fileupload in den input s3 Bucket wird die Lambda Funktion getriggert
+- Trigger berechtigung für den input s3 Bucket erstellen
+- Trigger erstellen, bei einem csv-File upload in den input s3 Bucket wird die Lambda Funktion getriggert
 
 Funktionsweise csvToJson.sh
 
@@ -80,55 +80,23 @@ Funktionsweise reset.sh
 - Variabeln aus dem env.sh auslesen
 - s3 Bucket Inhalt löschen
 - s3 Bucket löschen
-- Triggerberechtigung des input s3 Buckets löschen
-- Lambda Funktio löschen
+- Trigger berechtigung des input s3 Buckets löschen
+- Lambda Funktion löschen
 - env.sh löschen
 
 Funktionsweise Lambda Funktion
 
-- Output s3 Bucket und Delimiter aus den Umgebungsvariabeln auslesen
+- Output s3 Bucket und Delimiter aus den Umgebungsvariablen auslesen
 - Delimiter von einem Wort zu einem Zeichen konvertieren
-- Durch alle hochgeladenen csvs loopen
-- - Input Bucket und hochgeladenes Element auslesen
-- - Delimiter setzen
-- - mit dem Csv-Helper die Csv Datei lesen und in ein Dictionary speichern
-- - Dictionary zu einem Json string konvertieren
-- - Json string in ein json File im output s3 Bucket speichern
-- - Loggen, dass die Konvertierung erfolgreich war
+- Durch alle hochgeladenen csv's loopen
+  - Input Bucket und hochgeladenes Element auslesen
+  - Delimiter setzen
+  - mit dem Csv-Helper die Csv Datei lesen und in ein Dictionary speichern
+  - Dictionary zu einem Json string konvertieren
+  - Json string in ein json File im output s3 Bucket speichern
+  - Loggen, dass die Konvertierung erfolgreich war
 
 ## Anwendung
-
-Bei allen Befehlen wird davon ausgegangen, dass sich der Anwender im Ordner /ProjektM346 befindet.
-Die Anwendung des Cloud-Services findet über den Script csvToJson statt.
-Zum eine csv Datei konvertieren, kann der Pfad zu ihr als Parameter mitgegeben werden:
-
-    ```
-    ./csvToJson.sh "CSVPFAD"
-    ```
-
-Ansonsten wird im Verlauf des Scripts nach der zu konvertierenden Datei gefragt
-  
-    ```
-    ./csvToJson.sh
-    ```
-
-Die Datei wird automatisch konvertiert und im Ordner /ProjektM346 als json Datei abgelegt
-Beispiel:
-
-    ```
-    ./csvToJson.sh /home/maxmuster/Mitgliederliste.csv 
-    ```
-
-Mitgliederliste.json wird im Ordner /ProjektM346 abgelegt.
-
-Wenn der Delimiter gewechselt werden soll, kann das Script reset.sh ausgeführt werden und daraufhin erneut das initialize.sh mit dem benötigten Delimiter
-
-    ```
-    ./reset.sh
-    ./initialize.sh "DELIMITER"
-    ```
-
-Wenn der Cloud-Service nicht mehr benötigt wird, kann ebenfalls das reset.sh ausgeführt werden.
 
 ### Anforderungen
 
@@ -151,40 +119,64 @@ Wenn der Cloud-Service nicht mehr benötigt wird, kann ebenfalls das reset.sh au
 
 ### Inbetriebnahme
 
-1. Folgenede Befehle asführen:
+Folgende Befehle ausführen:
 
-    ```
-    git clone https://github.com/TimoAepli/ProjektM346.git
-    cd ProjektM346
-    ```
+```
+git clone https://github.com/TimoAepli/ProjektM346.git
+cd ProjektM346
+./initalize.sh
+```
 
-    Falls csv Dateien mit dem Delimiter Komma konvertiert werden sollen:
-
-    ```
-    ./initalize.sh
-    ```
-
-    Falls csv Dateien mit einem anderen Delimiter konvertiert werden sollen:
-    DELIMITER mit dem entsprechenden Delimiter austauschen z.B. ;
-
-    ```
-    ./initalize.sh "DELIMITER"
-    ```
 
 ---
 
 ### Nutzung
 
+Bei allen Befehlen wird davon ausgegangen, dass sich der Anwender im Ordner /ProjektM346 befindet.
+Die Anwendung des Cloud-Services findet über den Script csvToJson statt.
+Zum eine csv Datei konvertieren, kann der Pfad zu ihr als Parameter mitgegeben werden:
+
+```
+./csvToJson.sh "CSVPFAD"
+```
+
+Ansonsten wird im Verlauf des Scripts nach der zu konvertierenden Datei gefragt
+
+```
+./csvToJson.sh
+```
+
+Die Datei wird automatisch konvertiert und im Ordner /ProjektM346 als json Datei abgelegt
+Beispiel:
+
+```
+./csvToJson.sh /home/maxmuster/Mitgliederliste.csv 
+```
+
+Mitgliederliste.json wird im Ordner /ProjektM346 abgelegt.
+
+Wenn der Delimiter gewechselt werden soll, kann das Script reset.sh ausgeführt werden und daraufhin erneut das initialize.sh mit dem benötigten Delimiter
+
+```
+./reset.sh
+./initialize.sh "DELIMITER"
+```
+
+Wenn der Cloud-Service nicht mehr benötigt wird, kann ebenfalls das reset.sh ausgeführt werden:
+```
+./reset.sh
+```
+
 ## Test Protokoll
 
 Für jeden Test wurde dieselbe Datei verwendet, die für den jeweiligen Test angepasst wurde:
-  ```
-  Name,Alter,Beruf,Stadt,Land,Gehalt
-  Anna,28,Lehrerin,Berlin,Deutschland,45000
-  Max,34,Ingenieur,Hamburg,Deutschland,55000
-  Lena,29,Designer,Stuttgart,Deutschland,48000
-  ```
-Folgende Test wurden von Timo Aepli am 19.12.2024 durchgeführt:
+```
+Name,Alter,Beruf,Stadt,Land,Gehalt
+Anna,28,Lehrerin,Berlin,Deutschland,45000
+Max,34,Ingenieur,Hamburg,Deutschland,55000
+Lena,29,Designer,Stuttgart,Deutschland,48000
+```
+Folgende Tests wurden von Timo Aepli am 19.12.2024 durchgeführt:
 
 ### Normales CSV File
 
@@ -287,7 +279,7 @@ So Verfolgten wir falsche Ansätze, wie ein Erstellscript für eine EC2 Instanz,
 Danach versuchten wir mit ChatGPT eine Gesamtlösung generieren zu lassen.
 Dies war aber zu viel auf einmal und es funktionierte nicht wirklich.
 Die s3 Buckets konnten wir nun erstellen und auch Daten uploaden, downloaden und die Buckets löschen.
-Wie wir die Lambda Funkion erstellen können, wussten wir noch nicht.
+Wie wir die Lambda Funktion erstellen können, wussten wir noch nicht.
 Schlussendlich hatten wir noch kaum Fortschritt und der Abgabetermin näherte sich.
 Daraufhin vertiefte ich mich in die Logiken rund um AWS.
 Mit einem deutlich effizienteren Gebrauch von ChatGPT und der Nutzung von der AWS Cli Dokumentation konnte ich die Anwendung umsetzen.
@@ -304,9 +296,15 @@ Insgesamt stellte sich das Projekt als eine grössere Herausforderung dar, als i
 ### Matteo Bucher
 
 ### Timo Aepli
+Zuerst habe ich mich in die Aufgabenstellung und das Thema eingearbeitet.   
+Dann haben wir eine grobe Übersicht gemacht, wer was macht. Wir haben uns darauf geeinigt, dass alle an allem arbeiten und dass es nur "Verantwortliche" gibt, die dafür sorgen, dass es fertig wird.
+Ich war für die Dokumentation verantwortlich und lernte so Markdowns kennen. Ich habe eine erste Version der Readme erstellt und bei der Entwicklung der Buckets geholfen.   
+
 
 ## Quellenverzeichnis
 
 [AWS CLI](https://docs.aws.amazon.com/cli/)
 
 [ChatGPT](https://chatgpt.com/)
+
+[OneNote](https://bldsg-my.sharepoint.com/personal/martin_frueh_gbssg_ch/Documents/Kursnotizbücher/2024-25%20M346%20-%20INA2a/)
