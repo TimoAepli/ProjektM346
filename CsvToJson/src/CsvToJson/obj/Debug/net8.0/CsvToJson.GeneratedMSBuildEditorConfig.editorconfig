@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CsvToJson
-build_property.ProjectDir = /home/vmadmin/ProjektM346/CsvToJson/src/CsvToJson/
+build_property.ProjectDir = /home/vmadmin/ProjektM346/ProjektM346/CsvToJson/src/CsvToJson/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -295,6 +295,19 @@ Insgesamt stellte sich das Projekt als eine grössere Herausforderung dar, als i
 
 ### Matteo Bucher
 
+Ich fand, dass ich durch die Entwicklung einiges lernen konnte.
+Durch die Aufteilung konnten wir uns immerhin ein bisschen Stress sparen, obwohl es mehr Arbeit war, als ich gedacht hatte.
+Leider war ich in der letzten Woche krank und konnte nicht mehr viel helfen.
+Die meisten Aufgaben wurden bereits von Timo und Benjamin erledigt.
+Grundsätzlich haben wir am Anfang leider die falschen Ansätze verfolgt, weil wir nicht genau überlegt haben, was wir wirklich brauchen.
+Nach einigen Fehlversuchen mit ChatGPT konnten wir schliesslich eigenständig die Buckets erstellen.
+Danach wurde ich leider krank, war nicht in der Schule und konnte auch von zu Hause aus nicht mehr viel machen.
+Deshalb habe ich leider auch nicht die Lambda-Funktion erstellt und komme damit jetzt nicht so gut zurecht.
+Ich hatte anfangs Probleme mit Git auf der VM, aber diese konnten wir dank Benjamins Git-Kenntnissen zum Glück schnell lösen.
+Trotzdem konnte ich viel lernen und das, was wir im Unterricht behandelt haben, nochmals vertiefen.
+Im Grossen und Ganzen war es eine Herausforderung. Die Abgabeverschiebung kam uns recht gelegen, und so konnten wir, denke ich, ein ziemlich gutes Endergebnis abliefern.
+
+
 ### Timo Aepli
 Zuerst habe ich mich in die Aufgabenstellung und das Thema eingearbeitet.   
 Dann haben wir eine grobe Übersicht gemacht, wer was macht. Wir haben uns darauf geeinigt, dass alle an allem arbeiten und dass es nur "Verantwortliche" gibt, die dafür sorgen, dass es fertig wird.
